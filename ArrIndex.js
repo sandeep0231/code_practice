@@ -6,7 +6,7 @@ const CurSum = (a) => {
   }
 }
 console.log(CurSum(1)(2)(2)());
-// 
+// --------------Sorting an array withour inbuilt bubble sort approch------------
 const StArr = [1, 9, 2, 6, 4, 3];
 for (let i = 0; i <= StArr.length - 1; i++) {
   for (let j = 0; j <= StArr.length - 1; j++) {
