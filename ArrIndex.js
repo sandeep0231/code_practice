@@ -504,6 +504,22 @@ let FindSmallestElement = (ar) =>{
     return smallest;
 } 
 console.log(FindSmallestElement([1,-6,-4,8,-10,5,-1]));
+// ============================================================
+
+// Find smallest and largest value at a time .
+let LargeAndSmallElement = (ar) =>{
+    let large = ar[0]; let small = ar[0];
+    for(let i=0; i<=ar.length-1; i++) {
+        if(large< ar[i]) {
+            large = ar[i];
+        }
+        else if(small>ar[i]) {
+            small =ar[i];
+        }
+    }   
+  return {'largest value is':large, 'smallest value is':small};
+}
+console.log( LargeAndSmallElement ([1,3,9,-1,4]) );
 
 // =============================================================
 let Anagrame = (str1,str2) =>{
