@@ -529,7 +529,17 @@ let Anagrame = (str1,str2) =>{
 console.log(Anagrame("listen","silent"));
 
 // =============================================================
-
+let palindrome = (str) =>{
+    left=0; right = str.length-1;
+    
+   while(left<right) {
+    if(str[left] !== str[right]) return false;
+    left++;
+    right--;
+   }    
+    return true;
+}
+console.log(palindrome("level"));
 // =============================================================
 // let arrN =[1,1,3,3,4,4];
 // let ar=[]; let ar1 =[];
