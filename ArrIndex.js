@@ -460,6 +460,30 @@ for(let i=0; i<=arrN.length-1; i++) {
    }
 }
 console.log(arrN);
+
+// ===========================================================
+
+
+const FindDuplicateElement = (array) =>{
+  let obj ={}; let dup = [];
+ for(let i=0; i<=array.length-1; i++) {
+     if(obj[array[i]]) {
+        obj[array[i]] = obj[array[i]]+1; 
+     
+        if(dup.indexOf(array[i]) ==-1) {
+            dup.push(array[i]);
+        }
+     } else {
+         obj[array[i]] =1;
+     }
+     
+ }
+ 
+ return dup;
+  
+}
+let ar =  [1, 2, 3, 6, 3, 6, 1];
+console.log(FindDuplicateElement(ar));
 // =============================================================
 // let arrN =[1,1,3,3,4,4];
 // let ar=[]; let ar1 =[];
