@@ -504,7 +504,29 @@ let FindSmallestElement = (ar) =>{
     return smallest;
 } 
 console.log(FindSmallestElement([1,-6,-4,8,-10,5,-1]));
+
 // =============================================================
+let Anagrame = (str1,str2) =>{
+    if(str1.length !=str2.length) { return false;}
+    let obj ={};
+    for(let i=0; i<=str1.length-1; i++) {
+        if(obj[str1[i]]) {
+           obj[str1[i]] =obj[str1[i]]+1; 
+        } else {
+            obj[str1[i]] =1;
+        }
+    }
+    
+    for(const val of str2) {
+        if(!obj[val]) {
+           return false;
+        } 
+       obj[val] -=1;
+        
+    }
+   return true;
+}
+console.log(Anagrame("listen","silent"));
 
 // =============================================================
 
