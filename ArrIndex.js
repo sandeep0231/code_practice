@@ -556,6 +556,33 @@ let palindrome = (str) =>{
     return true;
 }
 console.log(palindrome("level"));
+
+// =============================================================
+// Implement a function to remove duplicates from an array. 
+let RemoveDuplicateElement = (ar) =>{
+    let uniqueArr =[]; let flag =0;
+    for(let i=0; i<=ar.length-1; i++) {
+        if(uniqueArr.indexOf(ar[i]) ==-1) {
+        uniqueArr[flag] = ar[i]; 
+         flag++;
+        }
+    }
+    return uniqueArr;
+}
+
+console.log(RemoveDuplicateElement([1,5,9,2,1,5]) );
+
+// =============================================================
+
+// =============================================================
+
+// =============================================================
+
+
+// =============================================================
+
+// =============================================================
+
 // =============================================================
 // let arrN =[1,1,3,3,4,4];
 // let ar=[]; let ar1 =[];
