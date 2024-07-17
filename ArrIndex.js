@@ -480,7 +480,33 @@ const FindDuplicateElement = (array) =>{
 console.log(FindDuplicateElement([1, 2, 3, 6, 3, 6, 1]));
 
 // =============================================================
+// Find largest element from array without sorting.
+let FindLargestElement = (ar) =>{
+    let largest =ar[0];
+    for(let i=0; i<=ar.length-1; i++){
+        if(largest<ar[i]) {
+            largest =ar[i];
+        }
+    }
+    return largest;
+} 
+console.log(FindLargestElement([1,-6,-4,8,3,15,5,-1]));
 
+// =============================================================
+// Find smallest element from array without sorting.
+let FindSmallestElement = (ar) =>{
+    let smallest =ar[0];
+    for(let i=0; i<=ar.length-1; i++){
+        if(smallest>ar[i]) {
+            smallest =ar[i];
+        }
+    }
+    return smallest;
+} 
+console.log(FindSmallestElement([1,-6,-4,8,-10,5,-1]));
+// =============================================================
+
+// =============================================================
 
 // =============================================================
 // let arrN =[1,1,3,3,4,4];
