@@ -410,7 +410,7 @@ function  FlatArr(ar) {
         if(typeof (ar[i]) == 'object') {
             FlatArr(ar[i]);
         } else {
-          arr.push(ar[i]); 
+          Farr.push(ar[i]); 
         }  
     }
 return Farr;
