@@ -594,7 +594,26 @@ return [...quicksort(left),pivet,...quicksort(right)];
 
 console.log(quicksort(arr));
 // =============================================================
+function maxSubArray(nums) {
+    let result=Number.MIN_VALUE;
+    let temp=0
+    for(let i=0;i<nums.length;i++)
+    {
+        temp+=nums[i]+
+        `   `
+        if(temp>result){
+            result=temp
+        }
+        if(temp<0){
+            temp=0
+        }
+    }
+  return result
+}
 
+// Example usage
+const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+console.log(maxSubArray(nums)); // Output: 6 (subarray: [4, -1, 2, 1])
 // =============================================================
 
 
