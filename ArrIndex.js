@@ -573,7 +573,26 @@ let RemoveDuplicateElement = (ar) =>{
 console.log(RemoveDuplicateElement([1,5,9,2,1,5]) );
 
 // =============================================================
+let arr =[1,4,8,9,3,0,5];
+const quicksort =(arr) =>{
+    if(arr.length-1 <0) {
+        return arr;
+    }
+    
+    let pivet =arr[arr.length-1];
+let left =[]; let right= [];
+for (let i=0; i<=arr.length-2; i++){
+    if(arr[i]<pivet) {
+        left.push(arr[i]);
+    } else {
+        right.push(arr[i]);
+    }
+}
+return [...quicksort(left),pivet,...quicksort(right)];
+    
+}
 
+console.log(quicksort(arr));
 // =============================================================
 
 // =============================================================
