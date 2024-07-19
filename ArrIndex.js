@@ -614,8 +614,21 @@ function maxSubArray(nums) {
 // Example usage
 const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 console.log(maxSubArray(nums)); // Output: 6 (subarray: [4, -1, 2, 1])
-// =============================================================
 
+
+// =============================================================
+function Fibonachi(num) {
+    let num1 =0; let num2=1; let nextnum;
+   let FeboArr =[];
+    for(let i=1; i<=num; i++ ) {
+        FeboArr.push(num1);
+        nextnum = num1+num2;
+        num1 = num2;
+        num2 = nextnum;
+    }
+    return FeboArr;
+}
+console.log(Fibonachi(10));
 
 // =============================================================
 
