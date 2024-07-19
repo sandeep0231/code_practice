@@ -631,6 +631,16 @@ function Fibonacci(num) {
 console.log(Fibonacci(10));
 
 // =============================================================
+const ArmstonNumber = (number) =>{
+   number = number.toString();
+let temp=0;
+for(i=0; i<=number.length-1; i++) {
+temp += number[i]*number[i]*number[i];
+}
+if(temp ==number) return true;
+return false;
+}
+console.log(ArmstonNumber(153));
 
 // =============================================================
 
