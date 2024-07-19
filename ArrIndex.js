@@ -617,7 +617,7 @@ console.log(maxSubArray(nums)); // Output: 6 (subarray: [4, -1, 2, 1])
 
 
 // =============================================================
-function Fibonachi(num) {
+function Fibonacci(num) {
     let num1 =0; let num2=1; let nextnum;
    let FeboArr =[];
     for(let i=1; i<=num; i++ ) {
@@ -628,7 +628,7 @@ function Fibonachi(num) {
     }
     return FeboArr;
 }
-console.log(Fibonachi(10));
+console.log(Fibonacci(10));
 
 // =============================================================
 
