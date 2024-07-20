@@ -479,6 +479,20 @@ const FindDuplicateElement = (array) =>{
 }
 console.log(FindDuplicateElement([1, 2, 3, 6, 3, 6, 1]));
 
+// ===========================================================
+function DuplicateElementFind (arr) {
+  let dup = [];
+for(let i =0; i<=arr.length-1; i++) {
+  for (let j= i+1; j<=arr.length-1; j++) {
+      
+      if(arr[i] == arr[j]  && !dup.includes(arr[i]) ) {
+          dup.push(arr[i]);
+      }
+  }
+}
+return dup;
+}
+console.log( DuplicateElementFind([-1,4,2,3,2,-1,]));
 // =============================================================
 // Find largest element from array without sorting.
 let FindLargestElement = (ar) =>{
