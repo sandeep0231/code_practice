@@ -657,6 +657,19 @@ return false;
 console.log(ArmstonNumber(153));
 
 // =============================================================
+//Find secound highest element from array-
+function SecoundHighVal (ar) {
+let first =ar[0];
+let secunde =ar[0];
+for(let i=0; i<=ar.length-1; i++) {
+     if(ar[i]>first) {
+         secunde = first;
+        first = ar[i];
+    } 
+}
+return secunde;
+}
+console.log( SecoundHighVal([2,3,5,1,8,9]));
 
 // =============================================================
 // let arrN =[1,1,3,3,4,4];
