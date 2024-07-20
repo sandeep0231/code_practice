@@ -658,6 +658,7 @@ console.log(ArmstonNumber(153));
 
 // =============================================================
 //Find secound highest element from array-
+
 function SecoundHighVal (ar) {
 let first =ar[0];
 let secunde =ar[0];
@@ -665,11 +666,14 @@ for(let i=0; i<=ar.length-1; i++) {
      if(ar[i]>first) {
          secunde = first;
         first = ar[i];
-    } 
+    }  
+ else if(ar[i] > secunde) {
+     secunde  =ar[i];
+ }
 }
 return secunde;
 }
-console.log( SecoundHighVal([2,3,5,1,8,9]));
+console.log( SecoundHighVal([2,13,3,5,1,8,2]));
 
 // =============================================================
 function IsPrimeNumber (num) {
@@ -684,6 +688,21 @@ function IsPrimeNumber (num) {
 }
 console.log( IsPrimeNumber(29) );
 // =============================================================
+function maxProductOfTwoEle (arr) {
+   let firstEle = arr[0];
+   let    secoundEle = arr[0];
+    for (let i=0; i<=arr.length-1; i++) {
+        if(arr[i] > firstEle ) {
+            secoundEle = firstEle;
+            firstEle = arr[i];
+        } 
+        else if(arr[i] > secoundEle) {
+            secoundEle = arr[i];
+        }
+    }
+    return   firstEle * secoundEle;
+}
+console.log(maxProductOfTwoEle([2,9,5,3,2]) );
 
 // =============================================================
 
