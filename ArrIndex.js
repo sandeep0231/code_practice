@@ -613,8 +613,7 @@ function maxSubArray(nums) {
     let temp=0
     for(let i=0;i<nums.length;i++)
     {
-        temp+=nums[i]+
-        `   `
+        temp+=nums[i] 
         if(temp>result){
             result=temp
         }
