@@ -705,6 +705,29 @@ console.log(maxProductOfTwoEle([2,9,5,3,2]) );
 
 // =============================================================
 
+const mergeOverlappingIntervals = (intervals) =>{
+    intervals.sort((a,b) => a[0] -b[0] );
+ 
+      let mergedIntervals = [];
+    let pair = intervals[0];
+    // console.log(currentInterval[0]);
+     
+    for (const i of intervals) {
+        // this is overlapping case
+        if(pair[1] >= i[0]) {
+            pair[1] = Math.max(i[1],pair[1]);
+        } else {
+             mergedIntervals.push(pair);
+             pair =i;
+        }
+    }
+    
+   mergedIntervals.push(pair); 
+   return mergedIntervals;
+}
+console.log( mergeOverlappingIntervals([[1, 3], [2, 6], [8, 10], [15, 18]]) );
+// Output: [[1, 6], [8, 10], [15, 18]]
+
 // =============================================================
 
 // =============================================================
