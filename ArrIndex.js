@@ -729,7 +729,23 @@ console.log( mergeOverlappingIntervals([[1, 3], [2, 6], [8, 10], [15, 18]]) );
 // Output: [[1, 6], [8, 10], [15, 18]]
 
 // =============================================================
-
+// write code for last non repeating char
+const LastNonRepeatingChar = (str) =>{
+    let obj ={};
+    for(let i=0; i<=str.length-1; i++) {
+        if(obj[str[i]]) {
+           obj[str[i]] = obj[str[i]]+1; 
+        } else {
+            obj[str[i]] =1;
+        }
+    }
+    for(let j=str.length-1; j>=0; j--){
+        if(obj[str[j]] ===1) {
+            return str[j];
+        }
+    }
+}
+console.log( LastNonRepeatingChar("latter") );
 // =============================================================
 
 // =============================================================
