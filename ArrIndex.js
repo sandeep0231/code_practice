@@ -793,3 +793,8 @@ console.log( LastNonRepeatingChar("latter") );
 // console.log(NewArr,ar.length);
 
 
+
+// console.log(longestArr([10, 9, 2, 3, 7, 101, 18, 20, 25]) );
+
+// // [2, 3, 7, 101]
+
