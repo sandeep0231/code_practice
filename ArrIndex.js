@@ -748,6 +748,34 @@ const LastNonRepeatingChar = (str) =>{
 console.log( LastNonRepeatingChar("latter") );
 // =============================================================
 
+const longestIncreasingSubsequence = (arr)=>{
+// return arr;
+let initialVal = arr[0];
+let SubArr =[];
+
+for(num of arr) {
+    if(SubArr.length===0 || num >SubArr[SubArr.length-1] ) {
+        SubArr.push(num);
+    } else {
+        let low =0;
+        let high = SubArr.length-1;
+        while(low<= high) {
+            
+          let mid = Math.floor((low + high) / 2);
+        if (SubArr[mid] < num) {
+          low = mid + 1;
+        } else {
+          high = mid - 1;
+        }   
+        }
+       SubArr[low]=num; 
+    }
+    
+}
+ 
+return SubArr;    
+}
+console.log(longestIncreasingSubsequence([10, 9, 2, 3, 7, 101, 18, 20, 25]) );
 // =============================================================
 
 // =============================================================
@@ -779,22 +807,6 @@ console.log( LastNonRepeatingChar("latter") );
 // =============================================================
 
 // =============================================================
-// let arrN =[1,1,3,3,4,4];
-// let ar=[]; let ar1 =[];
-// for(let i=0; i<=arrN.length-1; i++) {
-//     // console.log(arrN[i]);
-//     if(arrN[i]==3) {
-//         ar1.push(3);
-//     } else {
-//         ar.push(arrN[i]);
-//     }
-// }
-// let NewArr =[...ar,...ar1];
-// console.log(NewArr,ar.length);
 
 
-
-// console.log(longestArr([10, 9, 2, 3, 7, 101, 18, 20, 25]) );
-
-// // [2, 3, 7, 101]
 
