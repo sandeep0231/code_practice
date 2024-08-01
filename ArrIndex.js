@@ -101,43 +101,34 @@ let Dnum = 6;
 let response = convertDecimalToBinary(Dnum);
 console.log(response);
 
-// function ConvertDecimalToBinary1(decimalNumber) { 
-//   if (decimalNumber === 0) { 
-//       return "0"; 
-//   } else { 
-//       return ConvertDecimalToBinary1( 
-//           Math.floor(decimalNumber / 2)) + (decimalNumber % 2); 
-
-//   } 
-// } 
-
-// const num1 = 2; 
-// const result = ConvertDecimalToBinary1(num1); 
-// console.log(result);
+// =========================================
+const PairForTargetVal = (arr,target)=>{
+    let pairArr =[];
+    for(let i=0; i<=arr.length-1; i++) {
+        for(let j=i+1; j<=arr.length-1; j++) {
+            if(arr[i]+arr[j]===100) {
+                pairArr.push([arr[i],arr[j]]);
+            }
+        }
+    }
+    return pairArr;
+}
+console.log( PairForTargetVal( [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],100) );
 
 // =========================================
-const Ars = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-let count = 0; ParArr = [];
-for (let i = 0; i <= Ars.length - 1; i++) {
-  for (let j = i + 1; j <= Ars.length - 1; j++) {
-    if (Ars[i] + Ars[j] === 100) {
-      ParArr[count] = [Ars[i], Ars[j]];
-    }
-  }
-  count++;
-}
-console.log(ParArr);
 
 // find sqare root values 
-const ArrN = [2, 4, 16, 15, 9, 25, 10];
-const newArp = [];
-for (let i = 0; i <= ArrN.length - 1; i++) {
-  var b = (ArrN[i] ** 0.5) ** 2;
-  if (b % 1 === 0) {
-    newArp.push(b);
-  }
+const SqareRootVals = (arr)=>{
+    let result =[];
+    for(let i=0; i<=arr.length-1; i++){
+        let b = ( (arr[i]**0.5)**2);
+        if(b%1===0) {
+          result.push(b);  
+        }
+    }
+    return result;
 }
-console.log(newArp);
+console.log( SqareRootVals([2, 4, 16, 15, 9, 25, 10]) );
 
 
 // =========================================
