@@ -359,6 +359,19 @@ function CheckPangram(strings) {
 }
 let strings = "The quick brown fox jumps over the lazy  dog";
 console.log(CheckPangram(strings));
+// ------------------------------------------------------
+//METHOD 2:- 
+function CheckPangram(str) {
+    arr=[];
+    for(i =0; i<=str.length-1; i++) {
+        arr.push(str[i]);
+    }
+    const uniqueVl = new Set(arr); //return uniue value object
+    
+    return uniqueVl.size == 28; // return true/false  after compare the size or count
+}
+let strings = "The quick brown fox jumps over the lazy  dog";
+console.log(CheckPangram(strings));
 
 // ================================================================
 // Count the Vowels from  strings
