@@ -1,3 +1,12 @@
+
+//------------SWAPING WITHOUT 3rd VARIABLE------------ 
+ var i=9;
+ var j=4;
+ i = j+i; // now i have 13
+ j = i-j; // 13-4= 9,  now j have 9,
+ i= i-j;  //13-9= 4 , now i have 4 .
+ console.log(i,j);
+
 // --------------Infinite curryning------------
 const CurSum = (a) => {
   return function (b) {
